@@ -42,12 +42,12 @@
         </svg>
 
         <ul class="navlist">
-            <li class="navlist-item"><a href="home.html">BAŞ SAHYPA</a></li>
-            <li class="navlist-item"><a href="abiturientlar.html">DALAŞGÄR ÜÇIN</a></li>
-            <li class="navlist-item"><a href="meyilnamalar.html" class="selected">OKUW MEÝILNAMALAR</a></li>
-            <li class="navlist-item"><a href="habarlar.html">HABARLAR</a></li>
-            <li class="navlist-item"><a href="about.html">BIZ BARADA</a></li>
-            <li class="navlist-item"><a href="contacts.html">HABARLAŞMAK ÜÇIN</a></li>
+            <li class="navlist-item"><a href={% url 'home' %}>BAŞ SAHYPA</a></li>
+            <li class="navlist-item"><a href={% url 'abiturientlar' %}>DALAŞGÄR ÜÇIN</a></li>
+            <li class="navlist-item"><a href={% url 'meyilnamalar' %} class="selected">OKUW MEÝILNAMALAR</a></li>
+            <li class="navlist-item"><a href={% url 'habarlar' %}>HABARLAR</a></li>
+            <li class="navlist-item"><a href={% url 'about' %}>BIZ BARADA</a></li>
+            <li class="navlist-item"><a href={% url 'contacts' %}>HABARLAŞMAK ÜÇIN</a></li>
         </ul>
 
         <div class="logo">
@@ -266,10 +266,10 @@
             <div class="column">
                 <h1>Politehniki orta hünär okuw mekdebi</h1>
                 <ul class="footer-list">
-                    <li class="footer-list-item"><a href={% url 'univers:home' %}>Baş sahypa</a></li>
-                    <li class="footer-list-item"><a href="abiturientlar.html">Dalaşgär üçin</a></li>
-                    <li class="footer-list-item"><a href="meyilnamalar.html">Okuw meýilnamalar</a></li>
-                    <li class="footer-list-item"><a href="about.html">Biz barada</a></li>
+                    <li class="footer-list-item"><a href={% url 'home' %}>Baş sahypa</a></li>
+                    <li class="footer-list-item"><a href={% url 'abiturientlar' %}>Dalaşgär üçin</a></li>
+                    <li class="footer-list-item"><a href={% url 'meyilnamalar' %}>Okuw meýilnamalar</a></li>
+                    <li class="footer-list-item"><a href={% url 'about' %}>Biz barada</a></li>
                 </ul>
             </div>
 
