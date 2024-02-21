@@ -16,7 +16,9 @@ def contacts(request):
     return render(request, 'contacts.html')
 
 def habarlar(request):
-    return render(request, 'habarlar.html')
+    news = News.objects.all()[0:2]
+    context = {'news': news}
+    return render(request, 'habarlar.html', context)
 
 def meyilnamalar(request):
     return render(request, 'meyilnamalar.html')

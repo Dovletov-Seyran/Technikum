@@ -15,6 +15,7 @@
                 <li class="list-item">Sport</li>
             </ul>
 
+            {% for new in news %}
             <div class="news-item">
                 <div class="inside-news-item">
                     <img src={% static "img/main/news/turkmenaragatnasyk-agentliginin-politehniki-orta-hunar-okuw-mekdebi.jpg" %} alt="">
@@ -26,28 +27,14 @@
                         <p>“Türkmenaragatnaşyk” agentliginiň Politehniki
                             orta hünär okuw mekdebi</p>
                         <p>“Türkmenaragatnaşyk” agentliginiň Politehniki orta hünär...</p>
-                        <a href={% url 'more_news' %} class="btn">giňişleýin</a>
+                        <a href={% url 'more_news' new.slug %} class="btn">giňişleýin</a>
                     </div>
                 </div>
             </div>
-
-            <div class="news-item">
-                <div class="inside-news-item">
-                    <img src={% static "img/main/news/turkmenaragatnasyk-agentliginin-politehniki-orta-hunar-okuw-mekdebi.jpg" %} alt="">
-                    <div class="news-content">
-                        <div class="subtitle">
-                            <p>30.10.2023</p>
-                            <p>Politehniki habarlar</p>
-                        </div>
-                        <p>“Türkmenaragatnaşyk” agentliginiň Politehniki
-                            orta hünär okuw mekdebi</p>
-                        <p>“Türkmenaragatnaşyk” agentliginiň Politehniki orta hünär...</p>
-                        <a href={% url 'more_news' %} class="btn">giňişleýin</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </main>
+{% endblock %}
     <!-- Burger -->
     <script src={% static "assets/js/burger.js" %}></script>
 
@@ -67,5 +54,3 @@
         </script>
 </body>
 </html>
-
-{% endblock %}

@@ -159,22 +159,23 @@
                     <li class="news-list-item">Medeniýet</li>
                     <li class="news-list-item">Sport</li>
                 </ul>
-                {% for new in news %}
-                <div class="last-news">
+                <div class="last-news" style="display: block;">
+                    {% for new in news %}
                     <div class="news-item">
-                        <div class="inside-news-item">
-                            <img src="/media/{{new.image}}" alt="">
+                        <div class="inside-news-item" style="justify-content: space-between;">
+                            <img src="/media/{{new.image}}" alt="" width="300px" >
                             <div class="news-content">
                                 <div class="subtitle">
                                     <p>{{ new.date }}</p>
-                                    <p>{{ new.name }}</p>
+                                    <p>{{ new.category }}</p>
                                 </div>
-                                <p>{{ new.text }}</p>
+                                <p>{{ new.name }}</p>
                                 <a href={% url 'habarlar' %} class="btn">giňişleýin</a>
                             </div>
                         </div>
                     </div>
-                    <div class="news-item">
+                    {% endfor %}
+                    <!-- <div class="news-item">
                         <div class="inside-news-item">
                             <img src="/media/{{new.image}}"'alt="">
                             <div class="news-content">
@@ -186,9 +187,8 @@
                                 <a href={% url 'habarlar' %} class="btn">giňişleýin</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                {% endfor %}
             </div>
         </div>
     </main>

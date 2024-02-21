@@ -10,5 +10,5 @@ urlpatterns = [
     path('contacts/', contacts, name='contacts'),
     path('meyilnamalar/', meyilnamalar, name='meyilnamalar'),
     path('habarlar/', habarlar, name='habarlar'),
-    path('more_news', more_news, name='more_news'),
+    path('more_news/<str:slug>/', more_news, name='more_news'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
